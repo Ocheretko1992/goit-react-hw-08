@@ -36,8 +36,7 @@ const ContactForm = () => {
         };
         dispatch(addContact(newContact));
         actions.resetForm();
-      }}
-    >
+      }}>
       <Form className={css.formContainer}>
         <label htmlFor={nameFieldId} className={css.label}>
           Name
