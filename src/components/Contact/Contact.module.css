@@ -1,0 +1,18 @@
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.contactName {
+  margin-bottom: 4px;
+}
+
+.deleteButton {
+  width: fit-content;
+  height: fit-content;
+  padding: 4px 8px;
+  border: 1px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+}

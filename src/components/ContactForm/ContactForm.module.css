@@ -1,0 +1,37 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin-bottom: 32px;
+  margin-left: 10px;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 10px 8px;
+}
+
+.label {
+  margin-bottom: 6px;
+}
+  
+.inputField {
+  display: flex;
+  flex-direction: column;
+  
+  margin-bottom: 16px;
+}
+
+.errorMessage {
+  font-size: 11px;
+  color: red;
+  margin-top: 8px;
+}
+
+.submitButton {
+  width: fit-content;
+  padding: 8px 10px;
+  margin: 0 auto;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+
