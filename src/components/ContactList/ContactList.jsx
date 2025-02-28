@@ -8,21 +8,19 @@ const ContactList = () => {
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
   const contacts = useSelector(filteredContacts);
-
   return (
     <ul className={css.contactList}>
       {isLoading && !error && <b>Request in progress...</b>}
-      {contacts.map((contact) => {
-        return (
-          <li key={contact.id} className={css.contactItem}>
-            <Contact
-              name={contact.name}
-              number={contact.number}
-              id={contact.id}
-            />
-          </li>
-        );
-      })}
+
+      {contacts.map((contact) => (
+        <li key={contact.id} className={css.contactItem}>
+          <Contact
+            name={contact.name}
+            number={contact.number}
+            id={contact.id}
+          />
+        </li>
+      ))}
     </ul>
   );
 };

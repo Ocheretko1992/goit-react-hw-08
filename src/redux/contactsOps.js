@@ -1,29 +1,29 @@
 import { createAsyncThunk, createSelector } from "@reduxjs/toolkit";
 import axios from "axios";
-import { selectFilter } from "./selectors";
+import { selectContacts, selectFilter } from "./selectors";
 
-axios.defaults.baseURL = "https://6659ad32de346625136d79ea.mockapi.io/";
+axios.defaults.baseURL = "https://67c1ed1361d8935867e4c1ff.mockapi.io/";
 
 export const fetchContacts = createAsyncThunk(
   "contacts/fetchAll",
   async (_, thunkAPI) => {
     try {
-      const response = await axios.get("/contacts");
-      return response.data;
-    } catch (e) {
-      return thunkAPI.rejectWithValue(e.message);
+      const { data } = await axios.get("/contacts");
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
 
 export const addContact = createAsyncThunk(
   "contacts/addContact",
-  async (newContact, thunkAPI) => {
+  async (body, thunkAPI) => {
     try {
-      const response = await axios.post("/contacts", newContact);
-      return response.data;
-    } catch (e) {
-      return thunkAPI.rejectWithValue(e.message);
+      const { data } = await axios.post("/contacts", body);
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
@@ -34,20 +34,22 @@ export const deleteContact = createAsyncThunk(
     try {
       const response = await axios.delete(`/contacts/${contactId}`);
       return response.data;
-    } catch (e) {
-      return thunkAPI.rejectWithValue(e.message);
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
 
 const filterContacts = (contacts, filter) => {
+  if (!contacts || !contacts.items) {
+    return [];
+  }
   return contacts.items.filter((contact) =>
     contact.name.toLowerCase().includes(filter.name.toLowerCase())
   );
 };
 
-export const selectContact = (state) => state.contacts;
 export const filteredContacts = createSelector(
-  [selectContact, selectFilter],
+  [selectContacts, selectFilter],
   (contacts, filter) => filterContacts(contacts, filter)
 );

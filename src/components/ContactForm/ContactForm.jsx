@@ -27,8 +27,12 @@ const ContactForm = () => {
 
   return (
     <Formik
-      initialValues={{ username: "", number: "" }}
+      initialValues={{
+        username: "",
+        number: "",
+      }}
       validationSchema={FeedbackSchema}
+
       onSubmit={(values, actions) => {
         const newContact = {
           name: values.username,
