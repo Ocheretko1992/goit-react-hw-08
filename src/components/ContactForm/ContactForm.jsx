@@ -31,7 +31,6 @@ const ContactForm = () => {
         number: "",
       }}
       validationSchema={FeedbackSchema}
-
       onSubmit={(values, actions) => {
         const newContact = {
           name: values.username,
@@ -40,41 +39,43 @@ const ContactForm = () => {
         dispatch(addContact(newContact));
         actions.resetForm();
       }}>
-      <Form className={s.formContainer}>
-        <label htmlFor={nameFieldId} className={s.label}>
-          Name
-        </label>
-        <Field
-          type="text"
-          name="username"
-          id={nameFieldId}
-          className={s.inputField}
-        />
-        <ErrorMessage
-          name="username"
-          component="span"
-          className={s.errorMessage}
-        />
+      <div className={s.wrapper}>
+        <Form className={s.formContainer}>
+          <label htmlFor={nameFieldId} className={s.label}>
+            Name
+          </label>
+          <Field
+            type="text"
+            name="username"
+            id={nameFieldId}
+            className={s.inputField}
+          />
+          <ErrorMessage
+            name="username"
+            component="span"
+            className={s.errorMessage}
+          />
 
-        <label htmlFor={phoneFieldId} className={s.label}>
-          Phone number
-        </label>
-        <Field
-          type="text"
-          name="number"
-          id={phoneFieldId}
-          className={s.inputField}
-        />
-        <ErrorMessage
-          name="number"
-          component="span"
-          className={s.errorMessage}
-        />
+          <label htmlFor={phoneFieldId} className={s.label}>
+            Phone number
+          </label>
+          <Field
+            type="text"
+            name="number"
+            id={phoneFieldId}
+            className={s.inputField}
+          />
+          <ErrorMessage
+            name="number"
+            component="span"
+            className={s.errorMessage}
+          />
 
-        <button type="submit" className={s.submitButton}>
-          Add contact
-        </button>
-      </Form>
+          <button type="submit" className={s.submitButton}>
+            Add contact
+          </button>
+        </Form>
+      </div>
     </Formik>
   );
 };

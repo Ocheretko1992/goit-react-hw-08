@@ -18,12 +18,12 @@ const persistConfig = {
   key: "auth-data",
   version: 1,
   storage,
-  whitelist: ["token", "isLoggedIn", "items"],
+  whitelist: ["token"],
 };
 
 export const store = configureStore({
   reducer: {
-    contacts: persistReducer(persistConfig, contactsReducer),
+    contacts: contactsReducer,
     filter: filterReducer,
     auth: persistReducer(persistConfig, authReducer),
   },

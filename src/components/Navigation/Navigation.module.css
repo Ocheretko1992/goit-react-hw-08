@@ -1,0 +1,11 @@
+.navContact{
+  display: flex;
+  gap:20px;
+}
+.link{
+color: silver;
+font-size: 18px;
+}
+.active{
+  color: rgb(255, 0, 0);
+}
