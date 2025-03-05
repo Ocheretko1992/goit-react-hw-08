@@ -42,7 +42,6 @@ const ContactForm = () => {
         <Form className={s.formContainer}>
           <label className={s.label}>
             <h1 className={s.book}>Record book</h1>
-
             <span>Name</span>
             <Field type="text" name="username" className={s.inputField} />
             <ErrorMessage
@@ -53,7 +52,7 @@ const ContactForm = () => {
           </label>
 
           <label className={s.label}>
-            <span>Phone number</span>
+            <span>Number phone </span>
             <Field type="number" name="number" className={s.inputField} />
             <ErrorMessage
               name="number"

@@ -38,7 +38,7 @@ const LoginForm = () => {
             <span>Password:</span>
             <Field name="password" />
           </label>
-          <button type="submit">Login</button>
+          <button className={s.btn} type="submit">Login</button>
           <p className={s.pRegister}>
             Don`t have your account? <Link className={s.a} to="/register">Get IT!</Link>
           </p>

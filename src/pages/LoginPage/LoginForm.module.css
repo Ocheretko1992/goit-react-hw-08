@@ -33,8 +33,7 @@ h2{
     cursor: pointer;
     padding: 4px;
     border-radius: 5px;
-    width: fit-content;
-    margin: 0 auto;
+    margin-top: 20px;
     border-color: tomato;
         &:hover{
       color: white;
