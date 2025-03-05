@@ -1,7 +1,7 @@
 import { Field, Form, Formik } from "formik";
 import s from "./LoginForm.module.css";
 import { useDispatch } from "react-redux";
-import { loginThunk } from "../../redux/auth/operation";
+import { loginThunk } from "../../redux/auth/operations";
 import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -20,8 +20,7 @@ const LoginForm = () => {
       .then((res) => {
         toast.success(`Welcome ${res.user.name}`);
         navigate("/contacts", { replace: true });
-      })
-      .catch(() => toast.error("Invalid data"));
+      });
 
     options.resetForm();
   };

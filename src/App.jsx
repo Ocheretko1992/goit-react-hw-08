@@ -1,4 +1,4 @@
-import "./App.css";
+
 import {Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import HomePage from "./pages/HomePage/HomePage";
@@ -6,7 +6,7 @@ import RegistrationForm from "./pages/RegistrationPage/RegistrationForm";
 import LoginForm from "./pages/LoginPage/LoginForm";
 import ContactsPage from "./pages/ContactsPage/ContactsPage";
 import { useDispatch, useSelector } from "react-redux";
-import { refreshUser } from "./redux/auth/operation";
+import { refreshUser } from "./redux/auth/operations";
 import { useEffect } from "react";
 import { selectIsRefreshing } from "./redux/auth/selectors";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
