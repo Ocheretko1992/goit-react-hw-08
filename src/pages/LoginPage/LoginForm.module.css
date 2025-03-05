@@ -19,7 +19,8 @@ h2{
   padding: 10px 15px;
   border-radius: 7px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  /* background: linear-gradient(145deg, #ffffff, #e6e6e6); */
+  background: linear-gradient(45deg, aqua, rgb(1, 76, 78));
   label {
     display: flex;
     flex-direction: column;
