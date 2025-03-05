@@ -29,6 +29,7 @@ const LoginForm = () => {
     <div className={s.wrapper}>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
         <Form className={s.form}>
+      <h2>Login</h2>
           <label className={s.label}>
             <span>Email:</span>
             <Field name="email" />

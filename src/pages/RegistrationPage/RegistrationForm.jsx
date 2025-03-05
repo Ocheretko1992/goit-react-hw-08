@@ -22,8 +22,10 @@ const RegistrationForm = () => {
 
   return (
     <div className={s.wrapper}>
+      {" "}
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
         <Form className={s.form}>
+      <h2>Registration</h2>
           <label className={s.label}>
             <span>Name:</span>
             <Field name="name" />
@@ -38,7 +40,7 @@ const RegistrationForm = () => {
           </label>
           <button type="submit">Register</button>
           <p className={s.Login}>
-            If you are logged in {''}
+            If you are logged in {""}
             <Link className={s.a} to="/login">
               Get IT!
             </Link>
