@@ -7,6 +7,7 @@
 }
 h2 {
   font-weight: 500;
+  color: aquamarine;
 }
 .form {
   display: flex;
@@ -32,9 +33,13 @@ h2 {
     border-radius: 5px;
     border-color: tomato;
     margin-top: 20px;
+    background-color: darkcyan;
+      color: darkorange;
+    transition: transform 0.4s ease, background-color 0.4s ease, color 0.4s ease;
     &:hover {
-      color: white;
-      background-color: blue;
+      transform: scale(1.02);
+      color: cyan;
+      background-color: chocolate;
     }
   }
 }
