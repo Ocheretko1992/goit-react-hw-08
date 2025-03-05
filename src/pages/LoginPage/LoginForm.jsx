@@ -32,14 +32,14 @@ const LoginForm = () => {
       <h2>Login</h2>
           <label className={s.label}>
             <span>Email:</span>
-            <Field name="email" />
+            <Field className={s.input} name="email" />
           </label>
           <label className={s.label}>
             <span>Password:</span>
-            <Field name="password" />
+            <Field type='password' className={s.input} name="password" />
           </label>
           <button className={s.btn} type="submit">Login</button>
-          <p className={s.pRegister}>
+          <p className={s.login}>
             Don`t have your account? <Link className={s.a} to="/register">Get IT!</Link>
           </p>
         </Form>

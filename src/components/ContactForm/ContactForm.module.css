@@ -1,18 +1,17 @@
 .wrapper{
 display: flex;
 justify-content: center;
+padding: 20px 0 20px 0;
 }
 .formContainer {
   display: flex;
   flex-direction: column;
   gap: 20px;
   width: 250px;
-  margin-bottom: 32px;
   border: 1px solid black;
   border-radius: 8px;
   padding: 10px 15px;
-  /* background-color: aqua; */
-  background: linear-gradient(180deg, aqua, rgb(1, 76, 78));
+  background: linear-gradient(360deg, aqua, rgb(1, 76, 78));
 }
   .label{
 display: flex;
@@ -20,12 +19,16 @@ flex-direction: column;
 gap: 2px;
   }
 .inputField {
+      background: linear-gradient(180deg, aqua, rgb(1, 76, 78));
+    border: none;
+    outline: none;
+    padding: 3px 5px;
+    border-radius: 5px;
+    color: white;
   display: flex;
   flex-direction: column;
   width: 100%;
-  &:focus{
-    background-color: yellow;
-  }
+  line-height: 1.5;
 }
 
 .errorMessage {
@@ -37,6 +40,7 @@ gap: 2px;
   width: fit-content;
   padding: 8px 10px;
   margin: 0 auto;
+  margin-bottom: 10px;
   cursor: pointer;
   border-radius: 4px;
   border: 1px solid black;
@@ -52,5 +56,6 @@ gap: 2px;
 .book{
   margin: 0 auto;
   margin-bottom: 10px;
+  color: aquamarine;
 }
 

@@ -1,21 +1,17 @@
-.searchBoxContainer {
-  margin-bottom: 20px;
-  margin-left: 10px;
+.searchBoxContainer{
+  padding: 15px;
 }
-
 .searchBoxInput {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
+  width: 250px;
   padding: 4px 10px;
   margin-top: 10px;
-  margin-bottom: 32px;
-  border-radius: 4px;
-  border: 1px solid black;
-  &:focus{
-background-color: yellow;
-  }
+  background: linear-gradient(90deg, aqua, rgb(1, 76, 78));
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: black;
+  line-height: 1.5;
 }
-.h3{
+.h3 {
   color: lime;
 }

@@ -4,8 +4,15 @@
   height: 100vh;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(180deg, aqua, rgb(1, 76, 78));
 }
-
+.input{
+  background: linear-gradient(180deg, aqua, rgb(1, 76, 78));
+  border: none;
+  outline: none;
+  border-radius: 5px;
+color: white;
+}
 h2 {
   display: flex;
   justify-content: center;
@@ -38,7 +45,7 @@ h2 {
     border-color: tomato;
     color: darkorange;
     background-color: darkcyan;
-    transition: transform 0.4s ease, background-color 0.4s ease, color 0.4s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
     &:hover {
       transform: scale(1.02);
       color: cyan;
@@ -47,9 +54,11 @@ h2 {
   }
 }
 .pRegister {
-  font-size: 14px;
+  font-size: 15px;
+  letter-spacing: 0.02em;
 }
 .a {
   text-decoration: underline;
   color: blue;
-}
+  }
+

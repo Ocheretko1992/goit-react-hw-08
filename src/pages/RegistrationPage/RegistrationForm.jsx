@@ -28,18 +28,18 @@ const RegistrationForm = () => {
       <h2>Registration</h2>
           <label className={s.label}>
             <span>Name:</span>
-            <Field name="name" />
+            <Field className={s.input} name="name" />
           </label>
           <label className={s.label}>
             <span>Email:</span>
-            <Field name="email" type="email" />
+            <Field className={s.input} name="email" type="email" />
           </label>
           <label className={s.label}>
             <span>Password:</span>
-            <Field name="password" type="password" />
+            <Field className={s.input} name="password" type="password" />
           </label>
           <button type="submit">Register</button>
-          <p className={s.Login}>
+          <p className={s.login}>
             If you are logged in {""}
             <Link className={s.a} to="/login">
               Get IT!

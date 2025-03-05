@@ -3,9 +3,9 @@
   justify-content: space-between;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   background: linear-gradient(180deg, rgba(9, 155, 157, 0.596), rgb(1, 76, 78));
-  margin-bottom: 20px;
   align-items: center;
   padding: 15px;
+      position: relative;
 }
 h4 {
   color: orange;
