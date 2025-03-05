@@ -2,3 +2,12 @@
   display: flex;
   gap: 12px;
 }
+.link{
+  color: red;
+  font-weight: 500;
+padding: 4px;
+      transition: all ease 0.3s;
+    &:hover{
+      transform: scale(1.07);
+    }
+}

@@ -8,5 +8,9 @@
   padding: 15px;
 }
 h4 {
-  color: silver;
+  color: orange;
+      transition: all ease 0.3s;
+    &:hover{
+      transform: scale(1.05);
+    }
 }
