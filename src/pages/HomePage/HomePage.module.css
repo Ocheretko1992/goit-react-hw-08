@@ -1,0 +1,12 @@
+.wrapper{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 60vh;
+}
+.p {
+
+color: lime;
+font-size: 30px;
+padding: 0 15px;
+}

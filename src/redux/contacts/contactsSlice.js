@@ -1,6 +1,13 @@
 import { createSelector, createSlice } from "@reduxjs/toolkit";
+import { selectNameFilter } from "../filters/filtersSlice";
 import { addContact, deleteContact, fetchContacts } from "./contactsOps";
-import { selectNameFilter } from "./filtersSlice";
+import { logoutThunk } from "../auth/operation";
+
+const initialState = {
+  items: [],
+  isLoading: false,
+  error: null,
+};
 
 export const selectContacts = (state) => state.contacts;
 export const selectIsLoading = (state) => state.contacts.isLoading;
@@ -8,11 +15,7 @@ export const selectError = (state) => state.contacts.error;
 
 const contactsSlice = createSlice({
   name: "contacts",
-  initialState: {
-    items: [],
-    isLoading: false,
-    error: null,
-  },
+  initialState,
   extraReducers: (builder) => {
     builder
       .addCase(fetchContacts.rejected, (state, action) => {
@@ -53,7 +56,8 @@ const contactsSlice = createSlice({
           (task) => task.id === action.payload.id
         );
         state.items.splice(index, 1);
-      });
+      })
+      .addCase(logoutThunk.fulfilled, () => initialState);
   },
 });
 

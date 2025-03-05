@@ -1,10 +1,9 @@
-import css from "./ContactForm.module.css";
-
+import s from "./ContactForm.module.css";
 import { Field, Form, Formik, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useId } from "react";
 import { useDispatch } from "react-redux";
-import { addContact } from "../../redux/contactsOps";
+import { addContact } from "../../redux/contacts/contactsOps";
 
 const FeedbackSchema = Yup.object().shape({
   username: Yup.string()
@@ -41,38 +40,38 @@ const ContactForm = () => {
         dispatch(addContact(newContact));
         actions.resetForm();
       }}>
-      <Form className={css.formContainer}>
-        <label htmlFor={nameFieldId} className={css.label}>
+      <Form className={s.formContainer}>
+        <label htmlFor={nameFieldId} className={s.label}>
           Name
         </label>
         <Field
           type="text"
           name="username"
           id={nameFieldId}
-          className={css.inputField}
+          className={s.inputField}
         />
         <ErrorMessage
           name="username"
           component="span"
-          className={css.errorMessage}
+          className={s.errorMessage}
         />
 
-        <label htmlFor={phoneFieldId} className={css.label}>
+        <label htmlFor={phoneFieldId} className={s.label}>
           Phone number
         </label>
         <Field
           type="text"
           name="number"
           id={phoneFieldId}
-          className={css.inputField}
+          className={s.inputField}
         />
         <ErrorMessage
           name="number"
           component="span"
-          className={css.errorMessage}
+          className={s.errorMessage}
         />
 
-        <button type="submit" className={css.submitButton}>
+        <button type="submit" className={s.submitButton}>
           Add contact
         </button>
       </Form>

@@ -1,0 +1,38 @@
+.wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border: 1px solid black;
+  padding: 10px 15px;
+  border-radius: 7px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    input{
+      padding: 3px 5px;
+      line-height: normal;
+    }
+  }
+  button{
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 5px;
+    width: fit-content;
+    margin: 0 auto;
+    border-color: tomato;
+        &:hover{
+      color: white;
+      background-color: blue;
+    }
+  }
+}
