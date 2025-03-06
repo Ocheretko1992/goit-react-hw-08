@@ -25,5 +25,4 @@ const Contact = ({ name, number, id }) => {
     </>
   );
 };
-
 export default Contact;
